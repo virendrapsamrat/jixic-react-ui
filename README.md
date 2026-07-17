@@ -11,7 +11,6 @@ This monorepo contains two public packages:
 
 - npm: [@jixic/react-ui](https://www.npmjs.com/package/@jixic/react-ui)
 - npm: [@jixic/react-native-ui](https://www.npmjs.com/package/@jixic/react-native-ui)
-- GitHub: [virendrapsamrat/-jixic-react-ui](https://github.com/virendrapsamrat/-jixic-react-ui)
 
 ## Overview
 
