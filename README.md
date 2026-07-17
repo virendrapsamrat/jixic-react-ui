@@ -1,17 +1,21 @@
-# @jixic/react-ui
+# Jixic UI
 
-Accessible React UI components, TypeScript primitives, design tokens, and CSS themes for React and Next.js web applications.
+Accessible UI components, TypeScript primitives, and design tokens for React web and React Native applications.
 
-The public package is `@jixic/react-ui`. It is built for React web applications and works well with Next.js, Vite, Remix, Astro, and other DOM-based React stacks.
+This monorepo contains two public packages:
+
+- `@jixic/react-ui` for React web, Next.js, Vite, Remix, Astro, and other DOM-based React stacks.
+- `@jixic/react-native-ui` for Expo, iOS, Android, React Native CLI, and React Native Web.
 
 ## Package Links
 
 - npm: [@jixic/react-ui](https://www.npmjs.com/package/@jixic/react-ui)
+- npm: [@jixic/react-native-ui](https://www.npmjs.com/package/@jixic/react-native-ui)
 - GitHub: [virendrapsamrat/-jixic-react-ui](https://github.com/virendrapsamrat/-jixic-react-ui)
 
 ## Overview
 
-`@jixic/react-ui` is designed to be a top-level React UI package: easy to find on npm, easy to install, and easy to adopt in real apps.
+Jixic UI is designed as a cross-platform UI system: easy to find on npm, easy to install, and easy to adopt in real apps.
 
 - Accessible components with native semantics where possible.
 - TypeScript declarations included in the package.
@@ -22,13 +26,13 @@ The public package is `@jixic/react-ui`. It is built for React web applications 
 
 ## Platform Support
 
-| Platform     | Status    | Notes                                                                                                                     |
-| ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------- |
-| React web    | Supported | Uses DOM elements and `@jixic/react-ui/styles.css`.                                                                       |
-| Next.js      | Supported | Import the stylesheet once in the app shell or root layout.                                                               |
-| React Native | Roadmap   | Should be a separate package, for example `@jixic/react-native-ui`, built with React Native primitives and shared tokens. |
+| Platform     | Status    | Notes                                                                                    |
+| ------------ | --------- | ---------------------------------------------------------------------------------------- |
+| React web    | Supported | Uses DOM elements and `@jixic/react-ui/styles.css`.                                      |
+| Next.js      | Supported | Import the stylesheet once in the app shell or root layout.                              |
+| React Native | Started   | Use `@jixic/react-native-ui`, built with React Native primitives and shared token ideas. |
 
-React Native support should not be shipped from this exact package because React Native does not use browser DOM nodes or CSS files. The right path is to share design tokens and API patterns, then publish a native package that uses `View`, `Text`, `Pressable`, `TextInput`, and `StyleSheet`.
+React Native support ships from a separate package because React Native does not use browser DOM nodes or CSS files. The native package uses `View`, `Text`, `Pressable`, `TextInput`, `Switch`, `ActivityIndicator`, and `StyleSheet`.
 
 ## Installation
 
@@ -65,6 +69,29 @@ export function Example() {
 ```
 
 The package supports React `>=18.2.0` and React `>=19.0.0`. It publishes ESM, CommonJS, and TypeScript declarations, with styles available from `@jixic/react-ui/styles.css`.
+
+## React Native / Expo
+
+Install the native package in an Expo or React Native app:
+
+```bash
+npm install @jixic/react-native-ui
+```
+
+```tsx
+import { Button, Card, Input, JixicNativeThemeProvider } from "@jixic/react-native-ui";
+
+export function ProfileForm() {
+  return (
+    <JixicNativeThemeProvider>
+      <Card>
+        <Input label="Email" placeholder="person@example.com" />
+        <Button onPress={() => {}}>Continue</Button>
+      </Card>
+    </JixicNativeThemeProvider>
+  );
+}
+```
 
 ## Local Development
 
