@@ -1,16 +1,25 @@
 import type { ReactNode } from "react";
 import {
   Alert,
+  Avatar,
   Badge,
   Button,
   Card,
   CardContent,
   CardFooter,
   CardHeader,
+  Checkbox,
   EmptyState,
   Input,
+  Radio,
+  RadioGroup,
+  Select,
   Skeleton,
   Spinner,
+  Switch,
+  Tabs,
+  Textarea,
+  Tooltip,
 } from "@jixic/react-ui";
 import { ModalPreview } from "../components/ModalPreview";
 
@@ -124,6 +133,179 @@ export const componentDocs: ComponentDoc[] = [
   },
   {
     accessibility: [
+      "Associates label and textarea using htmlFor/id.",
+      "Helper and error text are connected with aria-describedby.",
+      "Invalid state sets aria-invalid and exposes the error with role alert.",
+    ],
+    code: `import { Textarea } from "@jixic/react-ui";
+
+<Textarea label="Notes" helperText="Add context for your team." />`,
+    description: "A multi-line form control with label, helper text, and error state.",
+    name: "Textarea",
+    preview: <Textarea helperText="Add context for your team." label="Notes" />,
+    props: [
+      {
+        defaultValue: "4",
+        description: "Visible row count.",
+        name: "rows",
+        required: false,
+        type: "number",
+      },
+      {
+        defaultValue: "-",
+        description: "Validation message.",
+        name: "error",
+        required: false,
+        type: "string",
+      },
+    ],
+    slug: "textarea",
+  },
+  {
+    accessibility: [
+      "Uses a native checkbox input.",
+      "The visible label toggles the input.",
+      "Description and error text are connected to the control.",
+    ],
+    code: `import { Checkbox } from "@jixic/react-ui";
+
+<Checkbox label="Accept terms" description="Required before continuing." />`,
+    description: "A labeled checkbox for single binary choices and confirmations.",
+    name: "Checkbox",
+    preview: <Checkbox description="Required before continuing." label="Accept terms" />,
+    props: [
+      {
+        defaultValue: "-",
+        description: "Visible label for the checkbox.",
+        name: "label",
+        required: true,
+        type: "string",
+      },
+      {
+        defaultValue: "-",
+        description: "Supporting text below the label.",
+        name: "description",
+        required: false,
+        type: "string",
+      },
+    ],
+    slug: "checkbox",
+  },
+  {
+    accessibility: [
+      "Uses a native checkbox input with role switch.",
+      "The visible label toggles the switch.",
+      "State remains available through checked semantics.",
+    ],
+    code: `import { Switch } from "@jixic/react-ui";
+
+<Switch label="Email notifications" defaultChecked />`,
+    description: "A labeled switch for immediate on/off settings.",
+    name: "Switch",
+    preview: <Switch defaultChecked label="Email notifications" />,
+    props: [
+      {
+        defaultValue: "-",
+        description: "Visible label for the switch.",
+        name: "label",
+        required: true,
+        type: "string",
+      },
+      {
+        defaultValue: "-",
+        description: "Supporting text below the label.",
+        name: "description",
+        required: false,
+        type: "string",
+      },
+    ],
+    slug: "switch",
+  },
+  {
+    accessibility: [
+      "Uses a native select element.",
+      "Associates label and helper/error text with the control.",
+      "Disabled options are passed through to native option elements.",
+    ],
+    code: `import { Select } from "@jixic/react-ui";
+
+<Select
+  label="Role"
+  options={[
+    { label: "Admin", value: "admin" },
+    { label: "Member", value: "member" },
+  ]}
+/>`,
+    description: "A labeled native select with tokenized styling and validation state.",
+    name: "Select",
+    preview: (
+      <Select
+        label="Role"
+        options={[
+          { label: "Admin", value: "admin" },
+          { label: "Member", value: "member" },
+          { label: "Viewer", value: "viewer" },
+        ]}
+      />
+    ),
+    props: [
+      {
+        defaultValue: "-",
+        description: "Options rendered in the native select.",
+        name: "options",
+        required: true,
+        type: "SelectOption[]",
+      },
+      {
+        defaultValue: "-",
+        description: "Placeholder option with empty value.",
+        name: "placeholder",
+        required: false,
+        type: "string",
+      },
+    ],
+    slug: "select",
+  },
+  {
+    accessibility: [
+      "Uses native radio inputs grouped in a fieldset.",
+      "The group label is rendered as a legend.",
+      "Each option can include additional descriptive text.",
+    ],
+    code: `import { Radio, RadioGroup } from "@jixic/react-ui";
+
+<RadioGroup label="Plan">
+  <Radio label="Starter" name="plan" value="starter" />
+  <Radio label="Pro" name="plan" value="pro" />
+</RadioGroup>`,
+    description: "A semantic radio group for selecting one option from a short list.",
+    name: "RadioGroup",
+    preview: (
+      <RadioGroup label="Plan">
+        <Radio defaultChecked label="Starter" name="docs-plan" value="starter" />
+        <Radio label="Pro" name="docs-plan" value="pro" />
+      </RadioGroup>
+    ),
+    props: [
+      {
+        defaultValue: "-",
+        description: "Group label rendered as the fieldset legend.",
+        name: "label",
+        required: true,
+        type: "string",
+      },
+      {
+        defaultValue: "-",
+        description: "Radio options.",
+        name: "children",
+        required: true,
+        type: "ReactNode",
+      },
+    ],
+    slug: "radio-group",
+  },
+  {
+    accessibility: [
       "Uses semantic children by default so consumers can choose headings and landmarks.",
       "Borders and backgrounds meet contrast requirements in both themes.",
     ],
@@ -183,6 +365,41 @@ export const componentDocs: ComponentDoc[] = [
       },
     ],
     slug: "badge",
+  },
+  {
+    accessibility: [
+      "Images include the provided alt text.",
+      "Fallback initials are visible text when no image source is supplied.",
+      "Use meaningful alt text for people or entities.",
+    ],
+    code: `import { Avatar } from "@jixic/react-ui";
+
+<Avatar alt="Ada Lovelace" />`,
+    description: "A circular user or entity avatar with image and initials fallback.",
+    name: "Avatar",
+    preview: (
+      <>
+        <Avatar alt="Ada Lovelace" />
+        <Avatar alt="Grace Hopper" fallback="GH" size="lg" />
+      </>
+    ),
+    props: [
+      {
+        defaultValue: "-",
+        description: "Accessible image text and initials source.",
+        name: "alt",
+        required: true,
+        type: "string",
+      },
+      {
+        defaultValue: '"md"',
+        description: "Avatar size.",
+        name: "size",
+        required: false,
+        type: '"sm" | "md" | "lg"',
+      },
+    ],
+    slug: "avatar",
   },
   {
     accessibility: [
@@ -256,6 +473,84 @@ export const componentDocs: ComponentDoc[] = [
       },
     ],
     slug: "modal",
+  },
+  {
+    accessibility: [
+      "Uses role tablist, tab, and tabpanel.",
+      "Selected tab state is exposed with aria-selected.",
+      "Panel content is linked back to the active tab.",
+    ],
+    code: `import { Tabs } from "@jixic/react-ui";
+
+<Tabs
+  items={[
+    { label: "Overview", value: "overview", content: "Overview content" },
+    { label: "Billing", value: "billing", content: "Billing content" },
+  ]}
+/>`,
+    description: "A compact tab interface for switching between related panels.",
+    name: "Tabs",
+    preview: (
+      <Tabs
+        items={[
+          { content: "Project activity and health.", label: "Overview", value: "overview" },
+          { content: "Invoices, plan, and seats.", label: "Billing", value: "billing" },
+        ]}
+      />
+    ),
+    props: [
+      {
+        defaultValue: "-",
+        description: "Tab labels, values, and panel content.",
+        name: "items",
+        required: true,
+        type: "TabItem[]",
+      },
+      {
+        defaultValue: "-",
+        description: "Controlled selected tab value.",
+        name: "value",
+        required: false,
+        type: "string",
+      },
+    ],
+    slug: "tabs",
+  },
+  {
+    accessibility: [
+      "Tooltip content is rendered with role tooltip.",
+      "Content appears on hover and keyboard focus within the trigger.",
+      "Do not put essential information only in a tooltip.",
+    ],
+    code: `import { Button, Tooltip } from "@jixic/react-ui";
+
+<Tooltip content="Create a new project">
+  <Button>New</Button>
+</Tooltip>`,
+    description: "A lightweight tooltip wrapper for short supporting hints.",
+    name: "Tooltip",
+    preview: (
+      <Tooltip content="Create a new project">
+        <Button size="sm">New</Button>
+      </Tooltip>
+    ),
+    props: [
+      {
+        defaultValue: "-",
+        description: "Trigger element.",
+        name: "children",
+        required: true,
+        type: "ReactNode",
+      },
+      {
+        defaultValue: "-",
+        description: "Tooltip body.",
+        name: "content",
+        required: true,
+        type: "ReactNode",
+      },
+    ],
+    slug: "tooltip",
   },
   {
     accessibility: [

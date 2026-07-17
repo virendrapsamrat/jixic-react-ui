@@ -48,6 +48,7 @@ Set `data-ui-theme="dark"` on any parent element to enable dark theme tokens.
 ## Package Details
 
 - Supports React `>=18.2.0` and React `>=19.0.0`.
+- Includes components for actions, forms, feedback, overlays, navigation, loading states, and display surfaces.
 - Includes TypeScript declarations.
 - Provides ESM and CommonJS builds.
 - Exposes the compiled stylesheet at `@jixic/react-ui/styles.css`.

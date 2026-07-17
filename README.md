@@ -111,6 +111,7 @@ If npm does not allow trusted publishing before the first version exists, publis
 
 - React and React DOM are peer dependencies and are not bundled.
 - Consumers import only from the root package.
+- Included components cover buttons, inputs, textarea, select, checkbox, switch, radio groups, cards, badges, alerts, modal, tabs, tooltip, avatar, spinner, skeleton, and empty states.
 - Styles are shipped as `@jixic/react-ui/styles.css`.
 - Theme tokens use CSS variables and support light and dark themes.
 - Type declarations and source maps are generated during build.
