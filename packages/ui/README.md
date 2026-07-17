@@ -1,11 +1,25 @@
 # @jixic/react-ui
 
-A React and TypeScript UI component library for web and Next.js applications. The package is framework-agnostic and does not depend on Next.js APIs.
+Accessible React UI components, TypeScript primitives, design tokens, and CSS themes for React and Next.js web applications.
 
 ## Links
 
 - npm: [@jixic/react-ui](https://www.npmjs.com/package/@jixic/react-ui)
 - GitHub: [virendrapsamrat/-jixic-react-ui](https://github.com/virendrapsamrat/-jixic-react-ui)
+
+## Overview
+
+Use `@jixic/react-ui` when you want a small, typed, accessible component library with a consistent visual system and no required app framework. The package is designed for discoverability on npm with clear keywords, public repository metadata, install examples, and package docs.
+
+## Platform Support
+
+| Platform     | Status    | Notes                                                                        |
+| ------------ | --------- | ---------------------------------------------------------------------------- |
+| React web    | Supported | Uses DOM elements and the compiled stylesheet.                               |
+| Next.js      | Supported | Import `@jixic/react-ui/styles.css` once in the root layout or app shell.    |
+| React Native | Roadmap   | Planned as a separate native package that can share tokens and API patterns. |
+
+This package is not currently a React Native package because it ships DOM components and CSS. React Native UI support should live in a sibling package such as `@jixic/react-native-ui`.
 
 ## Install
 
@@ -53,3 +67,4 @@ Set `data-ui-theme="dark"` on any parent element to enable dark theme tokens.
 - Provides ESM and CommonJS builds.
 - Exposes the compiled stylesheet at `@jixic/react-ui/styles.css`.
 - Ships only package files from `dist`, `README.md`, `CHANGELOG.md`, and `LICENSE`.
+- Search-friendly metadata covers React UI, React components, TypeScript, accessibility, design systems, themes, CSS variables, and Next.js.

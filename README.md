@@ -1,13 +1,34 @@
-# react-ui-component-library
+# @jixic/react-ui
 
-A production-ready public React UI component library monorepo using TypeScript, pnpm workspaces, Turborepo, Changesets, Vitest, React Testing Library, and a Next.js documentation site.
+Accessible React UI components, TypeScript primitives, design tokens, and CSS themes for React and Next.js web applications.
 
-The public package is `@jixic/react-ui`. It is built for React and Next.js web applications, but the package itself does not depend on Next.js APIs.
+The public package is `@jixic/react-ui`. It is built for React web applications and works well with Next.js, Vite, Remix, Astro, and other DOM-based React stacks.
 
 ## Package Links
 
 - npm: [@jixic/react-ui](https://www.npmjs.com/package/@jixic/react-ui)
 - GitHub: [virendrapsamrat/-jixic-react-ui](https://github.com/virendrapsamrat/-jixic-react-ui)
+
+## Overview
+
+`@jixic/react-ui` is designed to be a top-level React UI package: easy to find on npm, easy to install, and easy to adopt in real apps.
+
+- Accessible components with native semantics where possible.
+- TypeScript declarations included in the package.
+- ESM and CommonJS builds for modern React tooling.
+- Theme tokens powered by CSS variables.
+- Components for actions, forms, feedback, overlays, navigation, loading states, and display surfaces.
+- Documentation pages with examples, props, accessibility notes, and copyable install commands.
+
+## Platform Support
+
+| Platform     | Status    | Notes                                                                                                                     |
+| ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------- |
+| React web    | Supported | Uses DOM elements and `@jixic/react-ui/styles.css`.                                                                       |
+| Next.js      | Supported | Import the stylesheet once in the app shell or root layout.                                                               |
+| React Native | Roadmap   | Should be a separate package, for example `@jixic/react-native-ui`, built with React Native primitives and shared tokens. |
+
+React Native support should not be shipped from this exact package because React Native does not use browser DOM nodes or CSS files. The right path is to share design tokens and API patterns, then publish a native package that uses `View`, `Text`, `Pressable`, `TextInput`, and `StyleSheet`.
 
 ## Installation
 
@@ -116,6 +137,7 @@ If npm does not allow trusted publishing before the first version exists, publis
 - Theme tokens use CSS variables and support light and dark themes.
 - Type declarations and source maps are generated during build.
 - Package metadata includes npm and GitHub links so npmjs.com can show the repository, issue tracker, homepage, license, and keywords.
+- Search positioning focuses on React UI components, TypeScript UI library, accessible components, design system tokens, Next.js UI, and CSS variable themes.
 
 ## License
 

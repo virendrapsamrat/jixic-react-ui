@@ -8,9 +8,35 @@ export default function HomePage() {
         <div className="docs-eyebrow">React and TypeScript UI components</div>
         <h1>@jixic/react-ui</h1>
         <p>
-          A public, framework-agnostic component library for React and Next.js web applications,
-          with accessible primitives, design tokens, tests, and a documentation playground.
+          Accessible React UI components for web and Next.js applications, with TypeScript types,
+          CSS variable themes, design tokens, tests, and a React Native UI roadmap.
         </p>
+      </section>
+      <section className="docs-section">
+        <h2>Why choose it</h2>
+        <div className="docs-grid">
+          <div className="docs-link-card">
+            <strong>Search-friendly package</strong>
+            <span>
+              Clear npm metadata, useful keywords, repository links, package docs, and install
+              examples for npm, Yarn, and pnpm.
+            </span>
+          </div>
+          <div className="docs-link-card">
+            <strong>Production-ready React web</strong>
+            <span>
+              Built for React 18, React 19, Next.js, Vite, Remix, Astro, and other DOM-based React
+              apps.
+            </span>
+          </div>
+          <div className="docs-link-card">
+            <strong>React Native UI roadmap</strong>
+            <span>
+              Native support should ship as a separate React Native package that shares tokens and
+              component API ideas without depending on browser CSS.
+            </span>
+          </div>
+        </div>
       </section>
       <section className="docs-section">
         <h2>Components</h2>

@@ -1,7 +1,7 @@
 {
   "name": "@jixic/react-ui",
   "version": "0.1.0",
-  "description": "A production-ready React UI component library for web and Next.js applications.",
+  "description": "Accessible React UI components, TypeScript primitives, design tokens, and CSS themes for React and Next.js web applications.",
   "license": "MIT",
   "homepage": "https://github.com/virendrapsamrat/-jixic-react-ui#readme",
   "repository": {
@@ -15,11 +15,21 @@
   "keywords": [
     "react",
     "ui",
+    "ui-library",
+    "react-ui",
+    "react-components",
     "components",
     "component-library",
+    "accessible-components",
+    "a11y",
     "design-system",
+    "headless-ui",
+    "css-variables",
+    "theme",
     "typescript",
-    "nextjs"
+    "nextjs",
+    "next-js",
+    "frontend"
   ],
   "type": "module",
   "sideEffects": [

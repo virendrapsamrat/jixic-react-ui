@@ -3,6 +3,7 @@ import { componentDocs } from "../content/components";
 import { ThemeToggle } from "./ThemeToggle";
 
 const primaryLinks = [
+  { href: "/overview", label: "Overview" },
   { href: "/installation", label: "Installation" },
   { href: "/accessibility", label: "Accessibility" },
   { href: "/theming", label: "Theming" },
