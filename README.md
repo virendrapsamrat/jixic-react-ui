@@ -4,11 +4,28 @@ A production-ready public React UI component library monorepo using TypeScript, 
 
 The public package is `@jixic/react-ui`. It is built for React and Next.js web applications, but the package itself does not depend on Next.js APIs.
 
+## Package Links
+
+- npm: [@jixic/react-ui](https://www.npmjs.com/package/@jixic/react-ui)
+- GitHub: [virendrapsamrat/-jixic-react-ui](https://github.com/virendrapsamrat/-jixic-react-ui)
+
 ## Installation
+
+Install the UI package with React and React DOM. They are peer dependencies, so your application owns the React version while `@jixic/react-ui` provides the components, tokens, TypeScript types, and compiled stylesheet.
+
+```bash
+npm install @jixic/react-ui react react-dom
+```
+
+```bash
+yarn add @jixic/react-ui react react-dom
+```
 
 ```bash
 pnpm add @jixic/react-ui react react-dom
 ```
+
+Import the stylesheet once near your app root, then import components from the package root.
 
 ```tsx
 import { Button, Card, CardContent, Input } from "@jixic/react-ui";
@@ -25,6 +42,8 @@ export function Example() {
   );
 }
 ```
+
+The package supports React `>=18.2.0` and React `>=19.0.0`. It publishes ESM, CommonJS, and TypeScript declarations, with styles available from `@jixic/react-ui/styles.css`.
 
 ## Local Development
 
@@ -95,6 +114,7 @@ If npm does not allow trusted publishing before the first version exists, publis
 - Styles are shipped as `@jixic/react-ui/styles.css`.
 - Theme tokens use CSS variables and support light and dark themes.
 - Type declarations and source maps are generated during build.
+- Package metadata includes npm and GitHub links so npmjs.com can show the repository, issue tracker, homepage, license, and keywords.
 
 ## License
 

@@ -3,6 +3,24 @@
   "version": "0.1.0",
   "description": "A production-ready React UI component library for web and Next.js applications.",
   "license": "MIT",
+  "homepage": "https://github.com/virendrapsamrat/-jixic-react-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virendrapsamrat/-jixic-react-ui.git",
+    "directory": "packages/ui"
+  },
+  "bugs": {
+    "url": "https://github.com/virendrapsamrat/-jixic-react-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "component-library",
+    "design-system",
+    "typescript",
+    "nextjs"
+  ],
   "type": "module",
   "sideEffects": [
     "**/*.css",

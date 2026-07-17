@@ -193,6 +193,42 @@ pre {
   gap: 1rem;
 }
 
+.docs-code-header h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.docs-install-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.docs-install-item {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.docs-reference-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.docs-reference-links a {
+  border: 1px solid var(--docs-border);
+  border-radius: 0.5rem;
+  color: var(--docs-link);
+  font-weight: 700;
+  padding: 0.625rem 0.75rem;
+  text-decoration: none;
+}
+
+.docs-reference-links a:hover,
+.docs-reference-links a:focus-visible {
+  border-color: var(--ui-color-primary);
+  outline: none;
+}
+
 .docs-table {
   border-collapse: collapse;
   width: 100%;
