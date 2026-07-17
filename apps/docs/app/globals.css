@@ -1,0 +1,233 @@
+@import "@jixic/react-ui/styles.css";
+
+:root {
+  --docs-background: #ffffff;
+  --docs-foreground: #101828;
+  --docs-muted: #667085;
+  --docs-border: #d0d5dd;
+  --docs-panel: #f8fafc;
+  --docs-link: #175cd3;
+}
+
+[data-ui-theme="dark"] {
+  --docs-background: #0b1220;
+  --docs-foreground: #f8fafc;
+  --docs-muted: #d0d5dd;
+  --docs-border: #475467;
+  --docs-panel: #111827;
+  --docs-link: #84caff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--docs-background);
+  color: var(--docs-foreground);
+  font-family: var(--ui-font-family);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+code,
+pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.docs-shell {
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.docs-sidebar {
+  background: var(--docs-panel);
+  border-right: 1px solid var(--docs-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+.docs-brand {
+  font-size: 1.125rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.docs-nav {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.docs-nav-title {
+  color: var(--docs-muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 1rem 0 0.25rem;
+  text-transform: uppercase;
+}
+
+.docs-nav a {
+  border-radius: 0.5rem;
+  color: var(--docs-foreground);
+  padding: 0.5rem 0.625rem;
+  text-decoration: none;
+}
+
+.docs-nav a:hover,
+.docs-nav a:focus-visible {
+  background: var(--ui-color-muted);
+  outline: none;
+}
+
+.docs-main {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.docs-page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.docs-hero {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.docs-eyebrow {
+  color: var(--docs-muted);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.docs-hero h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.docs-hero p,
+.docs-section p {
+  color: var(--docs-muted);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.docs-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.docs-link-card {
+  border: 1px solid var(--docs-border);
+  border-radius: 0.75rem;
+  color: var(--docs-foreground);
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.docs-link-card:hover {
+  border-color: var(--ui-color-primary);
+}
+
+.docs-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.docs-section h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.docs-preview {
+  background: var(--docs-panel);
+  border: 1px solid var(--docs-border);
+  border-radius: 0.75rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.docs-preview-surface {
+  align-items: center;
+  background: var(--ui-color-background);
+  border: 1px solid var(--ui-color-border);
+  border-radius: 0.625rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-height: 9rem;
+  padding: 1rem;
+}
+
+.docs-code {
+  background: #0b1220;
+  border-radius: 0.625rem;
+  color: #f8fafc;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.docs-code-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.docs-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.docs-table th,
+.docs-table td {
+  border-bottom: 1px solid var(--docs-border);
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.docs-table th {
+  color: var(--docs-muted);
+  font-size: 0.875rem;
+}
+
+.docs-prose {
+  display: grid;
+  gap: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 840px) {
+  .docs-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-sidebar {
+    height: auto;
+    position: static;
+  }
+
+  .docs-main {
+    padding: 1rem;
+  }
+}

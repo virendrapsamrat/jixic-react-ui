@@ -1,0 +1,10 @@
+{
+  "extends": "@repo/tsconfig/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
+  },
+  "include": ["src", "vitest.config.ts", "tsup.config.ts", "eslint.config.js"],
+  "exclude": ["dist", "node_modules"]
+}

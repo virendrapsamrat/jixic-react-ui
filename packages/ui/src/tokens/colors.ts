@@ -1,0 +1,17 @@
+export const colors = {
+  background: "var(--ui-color-background)",
+  foreground: "var(--ui-color-foreground)",
+  surface: "var(--ui-color-surface)",
+  surfaceRaised: "var(--ui-color-surface-raised)",
+  border: "var(--ui-color-border)",
+  primary: "var(--ui-color-primary)",
+  primaryForeground: "var(--ui-color-primary-foreground)",
+  danger: "var(--ui-color-danger)",
+  dangerForeground: "var(--ui-color-danger-foreground)",
+  success: "var(--ui-color-success)",
+  successForeground: "var(--ui-color-success-foreground)",
+  warning: "var(--ui-color-warning)",
+  warningForeground: "var(--ui-color-warning-foreground)",
+  muted: "var(--ui-color-muted)",
+  mutedForeground: "var(--ui-color-muted-foreground)",
+} as const;

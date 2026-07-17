@@ -1,0 +1,27 @@
+{
+  "name": "react-ui-component-library",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "build": "turbo build",
+    "build:docs": "turbo build --filter=@repo/docs",
+    "build:ui": "turbo build --filter=@jixic/react-ui",
+    "changeset": "changeset",
+    "clean": "turbo clean && rm -rf node_modules",
+    "dev": "turbo dev --parallel",
+    "docs": "pnpm --filter @repo/docs dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "version-packages": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.12",
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3"
+  }
+}
