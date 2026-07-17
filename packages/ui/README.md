@@ -13,13 +13,13 @@ Use `@jixic/react-ui` when you want a small, typed, accessible component library
 
 ## Platform Support
 
-| Platform     | Status    | Notes                                                                        |
-| ------------ | --------- | ---------------------------------------------------------------------------- |
-| React web    | Supported | Uses DOM elements and the compiled stylesheet.                               |
-| Next.js      | Supported | Import `@jixic/react-ui/styles.css` once in the root layout or app shell.    |
-| React Native | Roadmap   | Planned as a separate native package that can share tokens and API patterns. |
+| Platform     | Status           | Notes                                                                                    |
+| ------------ | ---------------- | ---------------------------------------------------------------------------------------- |
+| React web    | Supported        | Uses DOM elements and the compiled stylesheet.                                           |
+| Next.js      | Supported        | Import `@jixic/react-ui/styles.css` once in the root layout or app shell.                |
+| React Native | Separate package | Use `@jixic/react-native-ui`, built with React Native primitives and shared token ideas. |
 
-This package is not currently a React Native package because it ships DOM components and CSS. React Native UI support should live in a sibling package such as `@jixic/react-native-ui`.
+This package is not a React Native package because it ships DOM components and CSS. React Native UI support lives in the sibling package `@jixic/react-native-ui`.
 
 ## Install
 

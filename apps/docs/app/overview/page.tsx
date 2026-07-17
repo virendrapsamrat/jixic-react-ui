@@ -18,7 +18,7 @@ const roadmapItems = [
   {
     title: "React Native UI support",
     value:
-      "React Native should be supported by a separate package such as @jixic/react-native-ui, sharing design tokens and component API patterns while using native View, Text, Pressable, TextInput, and StyleSheet primitives.",
+      "React Native support has started in @jixic/react-native-ui, sharing design tokens and component API patterns while using native View, Text, Pressable, TextInput, Switch, and StyleSheet primitives.",
   },
   {
     title: "Shared foundation",
@@ -70,8 +70,8 @@ export default function OverviewPage() {
             <tr>
               <th scope="row">React Native</th>
               <td>
-                Planned as a separate native UI package. The current web package is not a drop-in
-                React Native package because React Native does not use DOM elements or CSS files.
+                Started as `@jixic/react-native-ui`. The web package is not a drop-in React Native
+                package because React Native does not use DOM elements or CSS files.
               </td>
             </tr>
           </tbody>
@@ -79,7 +79,7 @@ export default function OverviewPage() {
       </section>
 
       <section className="docs-section">
-        <h2>React Native Roadmap</h2>
+        <h2>React Native Package</h2>
         <div className="docs-grid">
           {roadmapItems.map((item) => (
             <div className="docs-link-card" key={item.title}>
@@ -93,8 +93,9 @@ export default function OverviewPage() {
       <section className="docs-section">
         <h2>Next Steps</h2>
         <p>
-          Keep building the web package first, then add a native package once the shared token
-          contract is stable.
+          Keep improving both packages together: finish more web primitives, expand native
+          primitives, and move shared colors, spacing, and typography into a dedicated token package
+          when the API is stable.
         </p>
         <div className="docs-reference-links">
           <Link href="/installation">Install package</Link>
