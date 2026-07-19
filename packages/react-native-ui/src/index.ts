@@ -14,6 +14,8 @@ export { SwitchField } from "./components/SwitchField";
 export type { SwitchFieldProps } from "./components/SwitchField";
 export { JixicNativeThemeProvider, useJixicNativeTheme } from "./theme";
 export type { JixicNativeThemeProviderProps } from "./theme";
+export { createRpx, DEFAULT_RPX_BASE_WIDTH, getRpxScale, rpx, useRpx } from "./rpx";
+export type { RpxConverter, RpxOptions, RpxWindowValue } from "./rpx";
 export {
   darkNativeTheme,
   lightNativeTheme,

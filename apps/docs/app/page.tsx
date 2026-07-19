@@ -9,7 +9,7 @@ export default function HomePage() {
         <h1>@jixic/react-ui</h1>
         <p>
           Accessible React UI components for web and Next.js applications, with TypeScript types,
-          CSS variable themes, design tokens, tests, and a React Native UI roadmap.
+          CSS variable themes, design tokens, tests, and a companion React Native UI package.
         </p>
       </section>
       <section className="docs-section">
@@ -30,10 +30,10 @@ export default function HomePage() {
             </span>
           </div>
           <div className="docs-link-card">
-            <strong>React Native UI roadmap</strong>
+            <strong>React Native UI package</strong>
             <span>
-              Native support should ship as a separate React Native package that shares tokens and
-              component API ideas without depending on browser CSS.
+              Native support ships as `@jixic/react-native-ui`, sharing tokens and component API
+              ideas without depending on browser CSS.
             </span>
           </div>
         </div>

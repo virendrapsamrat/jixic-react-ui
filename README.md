@@ -33,7 +33,7 @@ Jixic UI is designed as a cross-platform UI system: easy to find on npm, easy to
 
 React Native support ships from a separate package because React Native does not use browser DOM nodes or CSS files. The native package uses `View`, `Text`, `Pressable`, `TextInput`, `Switch`, `ActivityIndicator`, and `StyleSheet`.
 
-## Installation
+## React Web Installation
 
 Install the UI package with React and React DOM. They are peer dependencies, so your application owns the React version while `@jixic/react-ui` provides the components, tokens, TypeScript types, and compiled stylesheet.
 
@@ -138,21 +138,23 @@ pnpm test
 pnpm build
 cd packages/ui
 npm pack --dry-run
+cd ../react-native-ui
+npm pack --dry-run
 ```
 
-The release workflow is configured for npm trusted publishing through GitHub OIDC. It publishes from `packages/ui` with `npm publish --access public` and does not require an npm token.
+The release workflow is configured for npm trusted publishing through GitHub OIDC. It publishes both `packages/ui` and `packages/react-native-ui` with `npm publish --access public` and does not require an npm token.
 
 Required trusted publishing configuration:
 
 - Enable GitHub Actions for the repository.
 - Push this repository to GitHub.
-- On npmjs.com, configure a trusted publisher for `@jixic/react-ui`.
+- On npmjs.com, configure trusted publishers for `@jixic/react-ui` and `@jixic/react-native-ui`.
 - Use workflow filename `release.yml`.
 - Use environment name `npm-production`.
 - Allow `npm publish`.
 - Configure the `npm-production` environment in GitHub if you want manual approval before publish.
 
-If npm does not allow trusted publishing before the first version exists, publish `@jixic/react-ui@0.1.0` once manually with a one-time password or a granular access token with publish permission, then enable trusted publishing for future releases.
+If npm does not allow trusted publishing before the first version exists, publish `@jixic/react-ui@0.1.0` and `@jixic/react-native-ui@0.1.0` once manually with a one-time password or a granular access token with publish permission, then enable trusted publishing for future releases.
 
 ## Package Design
 
