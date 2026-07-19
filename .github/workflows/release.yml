@@ -46,6 +46,10 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Publish package
+      - name: Publish React web package
         working-directory: packages/ui
+        run: npm publish --access public
+
+      - name: Publish React Native package
+        working-directory: packages/react-native-ui
         run: npm publish --access public

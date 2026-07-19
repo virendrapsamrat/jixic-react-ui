@@ -37,6 +37,34 @@ export function ProfileForm() {
 }
 ```
 
+## Responsive RPX Values
+
+React Native styles use density-independent numbers, but mobile layouts often start from a
+fixed design width. The package exports `rpx` helpers that capture the current window width and
+scale a design value from a base width of `375` by default.
+
+```tsx
+import { StyleSheet, View } from "react-native";
+import { rpx, useRpx } from "@jixic/react-native-ui";
+
+const styles = StyleSheet.create({
+  panel: {
+    borderRadius: rpx(12),
+    padding: rpx(16),
+    width: rpx(320),
+  },
+});
+
+export function ResponsivePanel() {
+  const { rpx: liveRpx, width } = useRpx();
+
+  return <View style={[styles.panel, { minHeight: liveRpx(120), maxWidth: width }]} />;
+}
+```
+
+Use `rpx(value, { baseWidth: 390 })` when your design file uses a different mobile width.
+`useRpx()` updates with orientation and window-size changes.
+
 ## Components
 
 - `Button`
