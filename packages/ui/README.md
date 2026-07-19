@@ -53,13 +53,7 @@ Install the package with React and React DOM. They are peer dependencies and are
 npm install @jixic/react-ui react react-dom
 ```
 
-```bash
-yarn add @jixic/react-ui react react-dom
-```
-
-```bash
-pnpm add @jixic/react-ui react react-dom
-```
+Yarn and pnpm can also be used if your project prefers them.
 
 ## Usage
 

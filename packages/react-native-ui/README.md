@@ -10,13 +10,7 @@ This package is the native companion to `@jixic/react-ui`. It is built with Reac
 npm install @jixic/react-native-ui react react-native
 ```
 
-```bash
-yarn add @jixic/react-native-ui react react-native
-```
-
-```bash
-pnpm add @jixic/react-native-ui react react-native
-```
+Yarn and pnpm can also be used if your project prefers them.
 
 For Expo apps, `react` and `react-native` are usually already installed by Expo.
 
