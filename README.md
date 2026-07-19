@@ -41,13 +41,7 @@ Install the UI package with React and React DOM. They are peer dependencies, so 
 npm install @jixic/react-ui react react-dom
 ```
 
-```bash
-yarn add @jixic/react-ui react react-dom
-```
-
-```bash
-pnpm add @jixic/react-ui react react-dom
-```
+Yarn and pnpm can also be used if your project prefers them.
 
 Import the stylesheet once near your app root, then import components from the package root.
 
@@ -95,33 +89,35 @@ export function ProfileForm() {
 ## Local Development
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 Useful commands:
 
 ```bash
-pnpm lint
-pnpm typecheck
-pnpm test
-pnpm build
-pnpm build:ui
-pnpm build:docs
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+npm run build:ui
+npm run build:docs
 ```
+
+Yarn and pnpm can also be used if your project prefers them.
 
 ## Versioning
 
 Create a changeset for public package changes:
 
 ```bash
-pnpm changeset
+npm run changeset
 ```
 
 Then version packages:
 
 ```bash
-pnpm version-packages
+npm run version-packages
 ```
 
 ## Publishing to npm
@@ -131,11 +127,11 @@ Before publishing, confirm your npm account owns the `@jixic` scope and update a
 Local package verification:
 
 ```bash
-pnpm install --frozen-lockfile
-pnpm lint
-pnpm typecheck
-pnpm test
-pnpm build
+npm install
+npm run lint
+npm run typecheck
+npm run test
+npm run build
 cd packages/ui
 npm pack --dry-run
 cd ../react-native-ui

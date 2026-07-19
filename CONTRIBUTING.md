@@ -5,20 +5,22 @@ Thanks for improving `react-ui-component-library`.
 ## Setup
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
+
+Yarn and pnpm can also be used if your project prefers them.
 
 ## Quality Checks
 
 Run these before opening a pull request:
 
 ```bash
-pnpm format:check
-pnpm lint
-pnpm typecheck
-pnpm test
-pnpm build
+npm run format:check
+npm run lint
+npm run typecheck
+npm run test
+npm run build
 ```
 
 ## Component Guidelines
@@ -37,7 +39,7 @@ pnpm build
 Run this for package changes:
 
 ```bash
-pnpm changeset
+npm run changeset
 ```
 
 Choose the correct semver bump and write a concise public changelog entry.

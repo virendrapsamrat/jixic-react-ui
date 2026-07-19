@@ -2,7 +2,11 @@
   "name": "react-ui-component-library",
   "private": true,
   "version": "0.0.0",
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "npm@11.12.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "build:docs": "turbo build --filter=@repo/docs",
@@ -10,7 +14,7 @@
     "changeset": "changeset",
     "clean": "turbo clean && rm -rf node_modules",
     "dev": "turbo dev --parallel",
-    "docs": "pnpm --filter @repo/docs dev",
+    "docs": "npm --workspace @repo/docs run dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "turbo lint",

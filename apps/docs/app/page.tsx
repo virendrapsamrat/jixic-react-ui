@@ -19,7 +19,7 @@ export default function HomePage() {
             <strong>Search-friendly package</strong>
             <span>
               Clear npm metadata, useful keywords, repository links, package docs, and install
-              examples for npm, Yarn, and pnpm.
+              examples with npm as the default package manager.
             </span>
           </div>
           <div className="docs-link-card">

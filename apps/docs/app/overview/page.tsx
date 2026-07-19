@@ -6,7 +6,7 @@ const searchItems = [
   "Next.js UI library",
   "CSS variable design tokens",
   "React 18 and React 19 support",
-  "npm, Yarn, and pnpm installation",
+  "npm-first installation",
 ];
 
 const roadmapItems = [

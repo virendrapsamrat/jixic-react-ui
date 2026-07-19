@@ -11,14 +11,10 @@ const packageLinks = [
 
 const packageManagers = [
   { label: "npm", command: "npm install @jixic/react-ui react react-dom" },
-  { label: "Yarn", command: "yarn add @jixic/react-ui react react-dom" },
-  { label: "pnpm", command: "pnpm add @jixic/react-ui react react-dom" },
 ];
 
 const nativePackageManagers = [
   { label: "npm", command: "npm install @jixic/react-native-ui react react-native" },
-  { label: "Yarn", command: "yarn add @jixic/react-native-ui react react-native" },
-  { label: "pnpm", command: "pnpm add @jixic/react-native-ui react react-native" },
 ];
 
 const usage = `import { Button, Card, CardContent, Input } from "@jixic/react-ui";
@@ -78,6 +74,7 @@ export default function InstallationPage() {
             </div>
           ))}
         </div>
+        <p>Yarn and pnpm can also be used if your project prefers them.</p>
       </section>
       <section className="docs-section">
         <div className="docs-code-header">
@@ -107,6 +104,7 @@ export default function InstallationPage() {
             </div>
           ))}
         </div>
+        <p>Yarn and pnpm can also be used if your project prefers them.</p>
       </section>
       <section className="docs-section">
         <div className="docs-code-header">
