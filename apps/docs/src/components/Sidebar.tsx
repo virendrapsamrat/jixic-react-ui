@@ -5,6 +5,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const primaryLinks = [
   { href: "/overview", label: "Overview" },
   { href: "/installation", label: "Installation" },
+  { href: "/components", label: "Components" },
   { href: "/accessibility", label: "Accessibility" },
   { href: "/theming", label: "Theming" },
   { href: "/contributing", label: "Contributing" },
@@ -24,7 +25,7 @@ export function Sidebar() {
             {link.label}
           </Link>
         ))}
-        <div className="docs-nav-title">Components</div>
+        <div className="docs-nav-title">Component Pages</div>
         {componentDocs.map((component) => (
           <Link href={`/components/${component.slug}`} key={component.slug}>
             {component.name}

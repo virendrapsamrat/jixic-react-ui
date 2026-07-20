@@ -1,8 +1,8 @@
 # @jixic/react-native-ui
 
-Accessible React Native and Expo UI primitives with TypeScript types and shared design tokens.
+Accessible React Native and Expo UI primitives with TypeScript types, responsive helpers, and native design tokens.
 
-This package is the native companion to `@jixic/react-ui`. It is built with React Native primitives instead of DOM elements and browser CSS, so it can run in Expo, iOS, Android, and React Native Web.
+This package is built with React Native primitives instead of DOM elements and browser CSS, so it can run in Expo, iOS, Android, React Native CLI, and React Native Web.
 
 ## Install
 
@@ -13,6 +13,10 @@ npm install @jixic/react-native-ui react react-native
 Yarn and pnpm can also be used if your project prefers them.
 
 For Expo apps, `react` and `react-native` are usually already installed by Expo.
+
+## Package Size
+
+This package is lightweight: about 13 KB packed and 88 KB unpacked. React and React Native are peer dependencies and are not bundled.
 
 ## Usage
 
@@ -83,5 +87,5 @@ Use `rpx(value, { baseWidth: 390 })` when your design file uses a different mobi
 
 - Uses React Native primitives such as `View`, `Text`, `Pressable`, `TextInput`, `Image`, `ActivityIndicator`, and `StyleSheet`.
 - Does not import browser CSS.
-- Shares naming, color, spacing, and typography ideas with `@jixic/react-ui`.
+- Shares consistent naming, color, spacing, and typography tokens across native components.
 - Keeps `react` and `react-native` as peer dependencies.

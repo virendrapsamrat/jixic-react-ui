@@ -5,7 +5,6 @@ Accessible React UI components, TypeScript primitives, design tokens, and CSS th
 ## Links
 
 - npm: [@jixic/react-ui](https://www.npmjs.com/package/@jixic/react-ui)
-- React Native npm: [@jixic/react-native-ui](https://www.npmjs.com/package/@jixic/react-native-ui)
 - GitHub: [virendrapsamrat/-jixic-react-ui](https://github.com/virendrapsamrat/-jixic-react-ui)
 
 ## Overview
@@ -14,36 +13,13 @@ Use `@jixic/react-ui` when you want a small, typed, accessible component library
 
 ## Platform Support
 
-| Platform     | Status           | Notes                                                                                    |
-| ------------ | ---------------- | ---------------------------------------------------------------------------------------- |
-| React web    | Supported        | Uses DOM elements and the compiled stylesheet.                                           |
-| Next.js      | Supported        | Import `@jixic/react-ui/styles.css` once in the root layout or app shell.                |
-| React Native | Separate package | Use `@jixic/react-native-ui`, built with React Native primitives and shared token ideas. |
+| Platform  | Status    | Notes                                                                     |
+| --------- | --------- | ------------------------------------------------------------------------- |
+| React web | Supported | Uses DOM elements and the compiled stylesheet.                            |
+| Next.js   | Supported | Import `@jixic/react-ui/styles.css` once in the root layout or app shell. |
+| Vite      | Supported | Import `@jixic/react-ui/styles.css` once in your app entry file.          |
 
-This package is not a React Native package because it ships DOM components and CSS. React Native UI support lives in the sibling package `@jixic/react-native-ui`.
-
-## React Native / Expo
-
-Use the native package when building Expo, iOS, Android, React Native CLI, or React Native Web apps.
-
-```bash
-npm install @jixic/react-native-ui react react-native
-```
-
-```tsx
-import { Button, Card, Input, JixicNativeThemeProvider, rpx } from "@jixic/react-native-ui";
-
-export function ProfileForm() {
-  return (
-    <JixicNativeThemeProvider>
-      <Card style={{ padding: rpx(20) }}>
-        <Input label="Email" placeholder="person@example.com" />
-        <Button onPress={() => {}}>Continue</Button>
-      </Card>
-    </JixicNativeThemeProvider>
-  );
-}
-```
+This npm package is for React DOM applications. It does not include React Native components or browserless native primitives.
 
 ## Install
 
@@ -54,6 +30,10 @@ npm install @jixic/react-ui react react-dom
 ```
 
 Yarn and pnpm can also be used if your project prefers them.
+
+## Package Size
+
+This package is lightweight: about 30 KB packed and 155 KB unpacked. React and React DOM are peer dependencies and are not bundled.
 
 ## Usage
 

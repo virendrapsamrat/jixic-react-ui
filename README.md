@@ -12,6 +12,12 @@ This monorepo contains two public packages:
 - npm: [@jixic/react-ui](https://www.npmjs.com/package/@jixic/react-ui)
 - npm: [@jixic/react-native-ui](https://www.npmjs.com/package/@jixic/react-native-ui)
 
+The package READMEs are intentionally scoped for npm:
+
+- `packages/ui/README.md` shows only React web usage for the `@jixic/react-ui` npm page.
+- `packages/react-native-ui/README.md` shows only React Native usage for the `@jixic/react-native-ui` npm page.
+- This root README is the GitHub overview and contains the combined documentation for both libraries.
+
 ## Overview
 
 Jixic UI is designed as a cross-platform UI system: easy to find on npm, easy to install, and easy to adopt in real apps.
@@ -45,6 +51,8 @@ Yarn and pnpm can also be used if your project prefers them.
 
 Import the stylesheet once near your app root, then import components from the package root.
 
+Package size: about 30 KB packed and 155 KB unpacked. React and React DOM are peer dependencies and are not bundled.
+
 ```tsx
 import { Button, Card, CardContent, Input } from "@jixic/react-ui";
 import "@jixic/react-ui/styles.css";
@@ -71,6 +79,8 @@ Install the native package in an Expo or React Native app:
 npm install @jixic/react-native-ui
 ```
 
+Package size: about 13 KB packed and 88 KB unpacked. React and React Native are peer dependencies and are not bundled.
+
 ```tsx
 import { Button, Card, Input, JixicNativeThemeProvider } from "@jixic/react-native-ui";
 
@@ -85,6 +95,43 @@ export function ProfileForm() {
   );
 }
 ```
+
+## React Web Components
+
+`@jixic/react-ui` includes DOM-based React components and ships the compiled stylesheet at `@jixic/react-ui/styles.css`.
+
+- `Button`
+- `Input`
+- `Textarea`
+- `Checkbox`
+- `Switch`
+- `Select`
+- `RadioGroup`
+- `Card`
+- `Badge`
+- `Avatar`
+- `Alert`
+- `Modal`
+- `Tabs`
+- `Tooltip`
+- `Spinner`
+- `Skeleton`
+- `EmptyState`
+
+## React Native Components
+
+`@jixic/react-native-ui` includes native primitives and responsive helpers for Expo, iOS, Android, React Native CLI, and React Native Web.
+
+- `Button`
+- `Input`
+- `Card`
+- `Badge`
+- `Avatar`
+- `Spinner`
+- `SwitchField`
+- `JixicNativeThemeProvider`
+- `rpx`
+- `useRpx`
 
 ## Local Development
 
@@ -101,10 +148,11 @@ npm run typecheck
 npm run test
 npm run build
 npm run build:ui
+npm run build:native-ui
 npm run build:docs
 ```
 
-Yarn and pnpm can also be used if your project prefers them.
+The repo is configured for pnpm workspaces in CI/deploy. npm commands can still be used locally when dependencies are already installed, but pnpm is the lockfile source of truth.
 
 ## Versioning
 

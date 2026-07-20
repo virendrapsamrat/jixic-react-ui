@@ -234,6 +234,11 @@ pre {
   width: 100%;
 }
 
+.docs-table-wrap {
+  overflow-x: auto;
+  width: 100%;
+}
+
 .docs-table th,
 .docs-table td {
   border-bottom: 1px solid var(--docs-border);
@@ -251,6 +256,30 @@ pre {
   display: grid;
   gap: 1rem;
   line-height: 1.7;
+}
+
+.docs-props-group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.docs-props-heading {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.docs-props-heading h3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.docs-props-heading a {
+  color: var(--docs-link);
+  font-weight: 700;
+  text-decoration: none;
 }
 
 @media (max-width: 840px) {

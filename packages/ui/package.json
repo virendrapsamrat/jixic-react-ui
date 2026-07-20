@@ -1,6 +1,6 @@
 {
   "name": "@jixic/react-ui",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Accessible React UI components, TypeScript primitives, design tokens, and CSS themes for React and Next.js web applications.",
   "license": "MIT",
   "homepage": "https://github.com/virendrapsamrat/-jixic-react-ui#readme",
@@ -66,8 +66,8 @@
     "react-dom": ">=18.2.0 || >=19.0.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "file:../eslint-config",
-    "@repo/tsconfig": "file:../tsconfig",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",

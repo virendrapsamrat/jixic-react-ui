@@ -1,0 +1,6 @@
+{
+  "project_id": "appgprj_6a5db9070bc881918765167f733afe84",
+  "framework": "nextjs",
+  "app_dir": "apps/docs",
+  "build_command": "npm run build:docs"
+}

@@ -2,15 +2,16 @@
   "name": "react-ui-component-library",
   "private": true,
   "version": "0.0.0",
-  "packageManager": "npm@11.12.1",
+  "packageManager": "pnpm@10.24.0",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo build",
-    "build:docs": "turbo build --filter=@repo/docs",
-    "build:ui": "turbo build --filter=@jixic/react-ui",
+    "build": "npm run build:ui && npm run build:native-ui && npm run build:docs",
+    "build:docs": "npm --workspace @repo/docs run build",
+    "build:native-ui": "npm --workspace @jixic/react-native-ui run build",
+    "build:ui": "npm --workspace @jixic/react-ui run build",
     "changeset": "changeset",
     "clean": "turbo clean && rm -rf node_modules",
     "dev": "turbo dev --parallel",
