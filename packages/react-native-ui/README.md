@@ -16,7 +16,7 @@ For Expo apps, `react` and `react-native` are usually already installed by Expo.
 
 ## Package Size
 
-This package is lightweight: about 15 KB packed and 100 KB unpacked. React and React Native are peer dependencies and are not bundled.
+This package is lightweight: about 16 KB packed and 104 KB unpacked. React and React Native are peer dependencies and are not bundled.
 
 ## Usage
 
@@ -65,14 +65,51 @@ Use `rpx(value, { baseWidth: 390 })` when your design file uses a different mobi
 
 ## Components
 
-- `Button`
-- `Input`
-- `Card`
-- `Badge`
-- `Avatar`
-- `Spinner`
-- `SwitchField`
-- `JixicNativeThemeProvider`
+| Component | Purpose |
+| --- | --- |
+| `Avatar` | Circular image or initials fallback using React Native `Image`, `Text`, and `View`. |
+| `Badge` | Compact native status label for metadata and state. |
+| `Button` | Pressable action control with variants, sizes, disabled state, and loading state. |
+| `Card` | Native `View` container with tokenized border, surface, radius, gap, and padding. |
+| `Input` | Labeled `TextInput` with helper text and error state. |
+| `Spinner` | Accessible `ActivityIndicator` loading indicator. |
+| `SwitchField` | Labeled native `Switch` with optional description. |
+| `JixicNativeThemeProvider` | Theme provider for light, dark, or custom native tokens. |
+| `rpx`, `createRpx`, `useRpx` | Responsive pixel helpers for scaling mobile layout values. |
+
+## Props Reference
+
+| Component | Prop | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- | --- |
+| `Avatar` | `alt` | `string` | Yes | `-` | Accessible label and initials source. |
+| `Avatar` | `fallback` | `string` | No | initials from `alt` | Text fallback when no image source is supplied. |
+| `Avatar` | `size` | `"sm" \| "md" \| "lg"` | No | `"md"` | Avatar dimension. |
+| `Avatar` | `source` | `ImageSourcePropType` | No | `-` | React Native image source. |
+| `Badge` | `children` | `ReactNode` | Yes | `-` | Badge content. |
+| `Badge` | `variant` | `"neutral" \| "success" \| "warning" \| "danger"` | No | `"neutral"` | Badge status variant. |
+| `Button` | `children` | `ReactNode` | Yes | `-` | Button label/content. |
+| `Button` | `variant` | `"primary" \| "secondary" \| "ghost" \| "danger"` | No | `"primary"` | Visual treatment for the action. |
+| `Button` | `size` | `"sm" \| "md" \| "lg"` | No | `"md"` | Button size. |
+| `Button` | `isLoading` | `boolean` | No | `false` | Shows an activity indicator and disables presses. |
+| `Button` | `style` | `StyleProp<ViewStyle>` | No | `-` | Pressable container style override. |
+| `Button` | `textStyle` | `StyleProp<TextStyle>` | No | `-` | Text style override. |
+| `Card` | `children` | `ReactNode` | Yes | `-` | Card content. |
+| `Card` | `style` | `StyleProp<ViewStyle>` | No | `-` | Container style override. |
+| `Input` | `label` | `string` | No | `-` | Visible field label. |
+| `Input` | `helperText` | `string` | No | `-` | Supplementary guidance below the field. |
+| `Input` | `error` | `string` | No | `-` | Validation message and danger border state. |
+| `Input` | `containerStyle` | `StyleProp<ViewStyle>` | No | `-` | Outer field wrapper style override. |
+| `Input` | `labelStyle` | `StyleProp<TextStyle>` | No | `-` | Label text style override. |
+| `Spinner` | `label` | `string` | No | `"Loading"` | Accessible loading label. |
+| `SwitchField` | `label` | `ReactNode` | Yes | `-` | Visible switch label. |
+| `SwitchField` | `description` | `ReactNode` | No | `-` | Supporting text below the label. |
+| `SwitchField` | `style` | `StyleProp<ViewStyle>` | No | `-` | Row container style override. |
+| `JixicNativeThemeProvider` | `children` | `ReactNode` | Yes | `-` | React tree receiving the theme. |
+| `JixicNativeThemeProvider` | `colorScheme` | `"dark" \| "light"` | No | `"light"` | Built-in theme selection. |
+| `JixicNativeThemeProvider` | `theme` | `JixicNativeTheme` | No | `-` | Custom native theme override. |
+| `rpx` | `value` | `number` | Yes | `-` | Design value to scale from the base width. |
+| `rpx` | `options` | `RpxOptions` | No | `-` | Base width, current width, scale limits, and precision. |
+| `useRpx` | `options` | `Omit<RpxOptions, "width">` | No | `-` | Responsive scaling options from current window dimensions. |
 
 ## Platform Support
 
