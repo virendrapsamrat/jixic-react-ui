@@ -19,6 +19,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "turbo lint",
+    "publish:native-ui": "npm --workspace @jixic/react-native-ui publish --access public",
+    "publish:ui": "npm --workspace @jixic/react-ui publish --access public",
     "test": "turbo test",
     "typecheck": "turbo typecheck",
     "version-packages": "changeset version"

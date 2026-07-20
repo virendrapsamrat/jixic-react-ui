@@ -16,7 +16,7 @@ For Expo apps, `react` and `react-native` are usually already installed by Expo.
 
 ## Package Size
 
-This package is lightweight: about 13 KB packed and 88 KB unpacked. React and React Native are peer dependencies and are not bundled.
+This package is lightweight: about 15 KB packed and 100 KB unpacked. React and React Native are peer dependencies and are not bundled.
 
 ## Usage
 

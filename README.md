@@ -76,10 +76,10 @@ The package supports React `>=18.2.0` and React `>=19.0.0`. It publishes ESM, Co
 Install the native package in an Expo or React Native app:
 
 ```bash
-npm install @jixic/react-native-ui
+npm install @jixic/react-native-ui react react-native
 ```
 
-Package size: about 13 KB packed and 88 KB unpacked. React and React Native are peer dependencies and are not bundled.
+Package size: about 15 KB packed and 100 KB unpacked. React and React Native are peer dependencies and are not bundled.
 
 ```tsx
 import { Button, Card, Input, JixicNativeThemeProvider } from "@jixic/react-native-ui";
@@ -150,6 +150,8 @@ npm run build
 npm run build:ui
 npm run build:native-ui
 npm run build:docs
+npm run publish:ui
+npm run publish:native-ui
 ```
 
 The repo is configured for pnpm workspaces in CI/deploy. npm commands can still be used locally when dependencies are already installed, but pnpm is the lockfile source of truth.
@@ -186,6 +188,13 @@ cd ../react-native-ui
 npm pack --dry-run
 ```
 
+Publish each npm package separately:
+
+```bash
+npm run publish:ui
+npm run publish:native-ui
+```
+
 The release workflow is configured for npm trusted publishing through GitHub OIDC. It publishes both `packages/ui` and `packages/react-native-ui` with `npm publish --access public` and does not require an npm token.
 
 Required trusted publishing configuration:
@@ -200,7 +209,7 @@ Required trusted publishing configuration:
 
 If npm does not allow trusted publishing before the first version exists, publish `@jixic/react-ui@0.1.0` and `@jixic/react-native-ui@0.1.0` once manually with a one-time password or a granular access token with publish permission, then enable trusted publishing for future releases.
 
-## Package Design
+## React Web Package Design
 
 - React and React DOM are peer dependencies and are not bundled.
 - Consumers import only from the root package.
@@ -210,6 +219,15 @@ If npm does not allow trusted publishing before the first version exists, publis
 - Type declarations and source maps are generated during build.
 - Package metadata includes npm and GitHub links so npmjs.com can show the repository, issue tracker, homepage, license, and keywords.
 - Search positioning focuses on React UI components, TypeScript UI library, accessible components, design system tokens, Next.js UI, and CSS variable themes.
+
+## React Native Package Design
+
+- React and React Native are peer dependencies and are not bundled.
+- Consumers import only from the root package.
+- Included components cover buttons, inputs, cards, badges, avatars, spinners, switch fields, theme providers, and responsive `rpx` helpers.
+- Components are built with React Native primitives, not browser DOM elements or CSS.
+- Type declarations and source maps are generated during build.
+- Package metadata includes npm and GitHub links so npmjs.com can show the repository, issue tracker, homepage, license, and keywords.
 
 ## License
 
