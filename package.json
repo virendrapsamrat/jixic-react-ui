@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build:ui && npm run build:native-ui && npm run build:docs",
+    "build": "npm run build:ui && npm run build:native-ui && npm run build:docs && mkdir -p dist && cp -R apps/docs/out/. dist",
     "build:docs": "npm --workspace @repo/docs run build",
     "build:native-ui": "npm --workspace @jixic/react-native-ui run build",
     "build:ui": "npm --workspace @jixic/react-ui run build",
