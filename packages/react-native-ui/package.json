@@ -1,6 +1,6 @@
 {
   "name": "@jixic/react-native-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Accessible React Native and Expo UI primitives with TypeScript types and shared design tokens.",
   "license": "MIT",
   "homepage": "https://github.com/virendrapsamrat/-jixic-react-ui#readme",

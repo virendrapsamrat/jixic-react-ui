@@ -21,6 +21,9 @@
     "lint": "turbo lint",
     "publish:native-ui": "npm --workspace @jixic/react-native-ui publish --access public",
     "publish:ui": "npm --workspace @jixic/react-ui publish --access public",
+    "release:all": "node scripts/release-package.mjs all",
+    "release:native-ui": "node scripts/release-package.mjs native-ui",
+    "release:ui": "node scripts/release-package.mjs ui",
     "test": "turbo test",
     "typecheck": "turbo typecheck",
     "version-packages": "changeset version"

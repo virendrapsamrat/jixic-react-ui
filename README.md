@@ -292,6 +292,21 @@ npm run publish:ui
 npm run publish:native-ui
 ```
 
+Or use the release helper to automatically bump the package version, run type checks, verify the npm tarball, prompt `npm login` in the browser when needed, and publish:
+
+```bash
+npm run release:ui
+npm run release:native-ui
+npm run release:all
+```
+
+Use `-- --bump minor` or `-- --bump major` when you need a larger version bump:
+
+```bash
+npm run release:ui -- --bump minor
+npm run release:native-ui -- --bump major
+```
+
 The release workflow is configured for npm trusted publishing through GitHub OIDC. It publishes both `packages/ui` and `packages/react-native-ui` with `npm publish --access public` and does not require an npm token.
 
 Required trusted publishing configuration:
